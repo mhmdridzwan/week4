@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS Dom example</title>
+</head>
+<body>
+	<h1>DOM example</h1>
+	<button onclick="sayHello()">Click me!</button>
+	<hr>
+	<input type="text" name="name" id="name" placeholder="Enter you name">
+	<button onclick="sayGoodbye()" id="goodbyebtn">Click me again!</button>
+	<button onclick="activatePressed()" id="deactivatebtn">Deactivate button</button>
+	<p id="message"></p>
+</body>
+<script type="text/javascript">
+
+	function activatePressed(){
+
+		//if the button is deactivated = activate it == activate button
+		//if the button is activated = deactivate it == deactivate button
+		if (document.getElementById("goodbyebtn").disabled == true){
+			document.getElementById("goodbyebtn").removeAttribute("disabled");
+			document.getElementById("deactivatebtn").innerHTML = "Deactivate Button";
+			//change the label of the button
+		}
+
+	else {
+	document.getElementById("goodbyebtn").setAttribute("disabled",true); 
+	document.getElementById("deactivatebtn").innerHTML = "Activate Button";
+	}
+}
+	function sayHello() {
+		// body...
+		alert("Hello");
+	}
+
+	function sayGoodbye(){
+		//retrieve the value from input of id name
+		var	name = document.getElementById("name").value;
+		alert("Goodbye " + name);
+
+		//innerhtml is put message in between <p>
+		document.getElementById("message").innerHTML = "Hello " + name + " another message here!"
+	}
+</script>
+</html>
