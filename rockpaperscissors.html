@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>rock paper scissor</title>
+</head>
+<body>
+	<h1>rock paper scissor</h1>
+	<button id="rock" onclick="selectWeapon(0)">Rock</button>
+	<button id="paper" onclick="selectWeapon(1)">Paper</button>
+	<button id="scissor" onclick="selectWeapon(2)">Scissors</button>
+	<p id="message"></p>
+
+</body>
+<script type="text/javascript">	
+	function selectWeapon(userChoice) {
+		// body...
+		var	computerChoice = Math.floor(Math.random()*3)
+		if (userChoice == 0){
+			//user select rock
+			if (computerChoice == 0 ){
+				//alert("computer select rock, its a draw")
+				//document.getElementById("message").innerHTML 
+				alert("computer select rock, it's a draw ")
+			}
+			else if (computerChoice == 1){
+				alert("computer select paper, you win")
+			}
+			else {
+				alert("computer select scissor, you win")
+			}
+		}
+		else if (userChoice == 1){
+			//user select paper
+			if (computerChoice == 1 ){
+				//alert("computer select paper, its a draw")
+				//document.getElementById("message").innerHTML = 
+				alert("computer select paper, it's a draw")
+			}
+			else if (computerChoice == 0){
+				alert("computer select rock, you lost")
+			}
+			else {
+				alert("computer select scissor, you lost")
+			}
+		}
+		else if (userChoice == 2){
+			//user select scissor
+			if (computerChoice == 2){
+				//alert("computer select paper, its a draw")
+				//document.getElementById("message").innerHTML = 
+				alert("computer select scissors, it's a draw")
+			}
+			else if (computerChoice == 1){
+				alert("computer select paper, you win")
+			}
+			else {
+				alert("computer select rock, you lost")
+			}
+		}
+		var result = alert;
+
+		//document.getElementById("message").innerHTML = result ; 
+		//"User select " + userChoice + " and computer select " + computerChoice + ", the winner is " ;
+}
+</script>
+</html>
